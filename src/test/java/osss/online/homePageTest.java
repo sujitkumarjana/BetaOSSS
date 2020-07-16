@@ -7,7 +7,6 @@ import Pages.HomePage;
 import TestBase.BaseClass;
 
 public class homePageTest extends BaseClass{
-
 	HomePage homePage;
 	public homePageTest (){
 		super();

@@ -20,10 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	
-	public HomePage homePageObject;
-	public LoginPage loginPageObject;
-	public DashboardPage dashboardPageObject;
-	
+
 	public static Properties prop;
 	public static WebDriver driver;
 	
@@ -55,6 +52,7 @@ public class BaseClass {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 	}
