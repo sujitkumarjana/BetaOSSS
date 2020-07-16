@@ -6,4 +6,16 @@
       <class name="osss.online.DashboardPageTest"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="osss.online.DashboardPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyPageURL"/>
+          <include name="verifyMenuItems"/>
+          <include name="verifyPageTitle"/>
+        </methods>
+      </class> <!-- osss.online.DashboardPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
