@@ -11,11 +11,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import Pages.DashboardPage;
+import Pages.HomePage;
+import Pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
 public class BaseClass {
+	
+	public HomePage homePageObject;
+	public LoginPage loginPageObject;
+	public DashboardPage dashboardPageObject;
 	
 	public static Properties prop;
 	public static WebDriver driver;
