@@ -2,7 +2,9 @@ package osss.online;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Pages.DashboardPage;
@@ -20,7 +22,7 @@ public class DashboardPageTest extends BaseClass{
 		super();
 	}
 	
-	@BeforeClass
+	@BeforeTest
 	public void setup(){
 		initialization();
 		homePage = new HomePage();
@@ -30,36 +32,42 @@ public class DashboardPageTest extends BaseClass{
 		dashboardPage = loginPage.login(prop.getProperty("user"), prop.getProperty("password"));
 	}
 	
-	@Test(priority = 1)
+	@Test
 	public void verifyPageTitle(){
 		String dashboardPageTitle = dashboardPage.verifyPageTitle();
 		Assert.assertEquals(dashboardPageTitle, "SSS - Easy & Complete Solution", 
 				"Dashboard page title not matched.");
 	}
 	
-	@Test(priority = 2)
+	/*@Test(priority = 2)
 	public void verifyPageURL(){
 		String dashboardPageURL = dashboardPage.verifyPageURL();
-		System.out.println("Dashboard Page URl is: " + dashboardPageURL);
 		Assert.assertEquals(dashboardPageURL, "http://beta.osss.online/Home/Dashboard", 
 				"Dashboard page URL not matched.");
-	}
+	}*/
 	
-	@Test(priority = 3)
+	@Test
 	public void verifyMenuItems(){
+		String userType = prop.getProperty("usertype");
+		if(userType.equalsIgnoreCase("md")){
 		Assert.assertTrue(dashboardPage.employeeMenu(), "Employees Menu is not displayed");
 		Assert.assertTrue(dashboardPage.manageFundMenu(), "Manage Fund Menu is not displayed");
 		Assert.assertTrue(dashboardPage.masterDistributorMenu(), "Master Distributor Menu is not displayed");
 		Assert.assertTrue(dashboardPage.distributorMenu(), "Distributor Menu is not displayed");
 		Assert.assertTrue(dashboardPage.retailersMenu(), "Retailers Menu is not displayed");
 		Assert.assertTrue(dashboardPage.customersMenu(), "Customer Menu is not displayed");
+		}
+		else if()
 	}
 	
-
+	@Test
+	public void verifyUserLavel(){
+		Assert.assertEquals(dashboardPage.verifyUserType(), "Admin");;
+	}
 	
-	/*@AfterClass
+	@AfterTest
 	public void TearDown(){
 		driver.quit();
-	}*/
+	}
 	
 }
