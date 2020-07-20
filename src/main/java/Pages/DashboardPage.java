@@ -58,7 +58,13 @@ public class DashboardPage extends BaseClass{
 		return costomersMenu.isDisplayed();
 	}
 	
-	
+	// @Author: Shyam
+	// Navigating to the Master Distributor Page
+	public MasterDistributorPage NavigateToMasterDistributor()
+	{
+		masterDistributorMenu.click();
+	    return new MasterDistributorPage();
+	}
 	
 	
 }

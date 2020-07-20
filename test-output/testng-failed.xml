@@ -3,19 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="osss.online.DashboardPageTest"/>
+      <class name="osss.online.MasterDistributorPageTest"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="osss.online.DashboardPageTest">
+      <class name="osss.online.MasterDistributorPageTest">
         <methods>
           <include name="setup"/>
-          <include name="verifyPageURL"/>
-          <include name="verifyMenuItems"/>
-          <include name="verifyPageTitle"/>
+          <include name="AddMasterDistributorTest"/>
         </methods>
-      </class> <!-- osss.online.DashboardPageTest -->
+      </class> <!-- osss.online.MasterDistributorPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

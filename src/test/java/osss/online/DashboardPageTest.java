@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import Pages.DashboardPage;
 import Pages.HomePage;
 import Pages.LoginPage;
+import Pages.MasterDistributorPage;
 import TestBase.BaseClass;
 
 public class DashboardPageTest extends BaseClass{
@@ -15,6 +16,7 @@ public class DashboardPageTest extends BaseClass{
 	HomePage homePage;
 	LoginPage loginPage;
 	DashboardPage dashboardPage;
+	
 
 	public DashboardPageTest(){
 		super();
@@ -26,8 +28,10 @@ public class DashboardPageTest extends BaseClass{
 		homePage = new HomePage();
 		homePage.navigatetoLoginPage();
 		loginPage = new LoginPage();
+		loginPage.login(prop.getProperty("user"), prop.getProperty("password"));
 		dashboardPage = new DashboardPage();
 		dashboardPage = loginPage.login(prop.getProperty("user"), prop.getProperty("password"));
+		
 	}
 	
 	@Test(priority = 1)
@@ -55,7 +59,15 @@ public class DashboardPageTest extends BaseClass{
 		Assert.assertTrue(dashboardPage.customersMenu(), "Customer Menu is not displayed");
 	}
 	
-
+    //Author: Shyam
+	// Navigating to Master Distributor Page
+	
+	@Test(priority = 4)
+	public void NavigateToMDPageTest()
+	{
+	  dashboardPage.NavigateToMasterDistributor();
+	}
+	
 	
 	/*@AfterClass
 	public void TearDown(){
