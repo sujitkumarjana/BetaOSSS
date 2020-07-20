@@ -2,9 +2,7 @@ package osss.online;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Pages.DashboardPage;
@@ -17,19 +15,22 @@ public class DashboardPageTest extends BaseClass{
 	HomePage homePage;
 	LoginPage loginPage;
 	DashboardPage dashboardPage;
+	
 
 	public DashboardPageTest(){
 		super();
 	}
 	
-	@BeforeTest
+	@BeforeClass
 	public void setup(){
 		initialization();
 		homePage = new HomePage();
 		homePage.navigatetoLoginPage();
 		loginPage = new LoginPage();
+		loginPage.login(prop.getProperty("user"), prop.getProperty("password"));
 		dashboardPage = new DashboardPage();
 		dashboardPage = loginPage.login(prop.getProperty("user"), prop.getProperty("password"));
+		
 	}
 	
 	@Test
@@ -49,7 +50,7 @@ public class DashboardPageTest extends BaseClass{
 	@Test
 	public void verifyMenuItems(){
 		String userType = prop.getProperty("usertype");
-		if(userType.equalsIgnoreCase("md")){
+		if(userType.equalsIgnoreCase("Admin")){
 		Assert.assertTrue(dashboardPage.employeeMenu(), "Employees Menu is not displayed");
 		Assert.assertTrue(dashboardPage.manageFundMenu(), "Manage Fund Menu is not displayed");
 		Assert.assertTrue(dashboardPage.masterDistributorMenu(), "Master Distributor Menu is not displayed");
@@ -57,15 +58,42 @@ public class DashboardPageTest extends BaseClass{
 		Assert.assertTrue(dashboardPage.retailersMenu(), "Retailers Menu is not displayed");
 		Assert.assertTrue(dashboardPage.customersMenu(), "Customer Menu is not displayed");
 		}
-		else if()
+		else if(userType.equalsIgnoreCase("MD")){
+			Assert.assertTrue(!dashboardPage.employeeMenu(), "Employees Menu is not displayed");
+			Assert.assertTrue(!dashboardPage.manageFundMenu(), "Manage Fund Menu is not displayed");
+			Assert.assertTrue(!dashboardPage.masterDistributorMenu(), "Master Distributor Menu is not displayed");
+			Assert.assertTrue(dashboardPage.distributorMenu(), "Distributor Menu is not displayed");
+			Assert.assertTrue(dashboardPage.retailersMenu(), "Retailers Menu is not displayed");
+			Assert.assertTrue(!dashboardPage.customersMenu(), "Customer Menu is not displayed");
+		}
+		else if(userType.equalsIgnoreCase("Distributors")){
+			Assert.assertTrue(!dashboardPage.employeeMenu(), "Employees Menu is not displayed");
+			Assert.assertTrue(!dashboardPage.manageFundMenu(), "Manage Fund Menu is not displayed");
+			Assert.assertTrue(!dashboardPage.masterDistributorMenu(), "Master Distributor Menu is not displayed");
+			Assert.assertTrue(!dashboardPage.distributorMenu(), "Distributor Menu is not displayed");
+			Assert.assertTrue(dashboardPage.retailersMenu(), "Retailers Menu is not displayed");
+			Assert.assertTrue(!dashboardPage.customersMenu(), "Customer Menu is not displayed");
+		}
 	}
 	
+//<<<<<<< HEAD
 	@Test
 	public void verifyUserLavel(){
 		Assert.assertEquals(dashboardPage.verifyUserType(), "Admin");;
 	}
+//=======
+    //Author: Shyam
+	// Navigating to Master Distributor Page
 	
-	@AfterTest
+	@Test(priority = 4)
+	public void NavigateToMDPageTest()
+	{
+	  dashboardPage.NavigateToMasterDistributor();
+	}
+	
+//>>>>>>> 4137fd05b5b48d36a5493972bd9d8a7ed06f582d
+	
+	@AfterClass
 	public void TearDown(){
 		driver.quit();
 	}

@@ -68,6 +68,7 @@ public class DashboardPage extends BaseClass{
 		return costomersMenu.isDisplayed();
 	}
 	
+<<<<<<< HEAD
 	//Verify user type (Admin, Master Distributor, Distributor...)
 	public String verifyUserType(){
 		return userLeble.getText();
@@ -78,5 +79,15 @@ public class DashboardPage extends BaseClass{
 		masterDistributorMenu.click();
 		return new MasterDistributorPage();
 	}
+=======
+	// @Author: Shyam
+	// Navigating to the Master Distributor Page
+	public MasterDistributorPage NavigateToMasterDistributor()
+	{
+		masterDistributorMenu.click();
+	    return new MasterDistributorPage();
+	}
+	
+>>>>>>> 4137fd05b5b48d36a5493972bd9d8a7ed06f582d
 	
 }
