@@ -34,7 +34,7 @@ public class DashboardPageTest extends BaseClass{
 	}
 	
 	@Test
-	public void verifyPageTitle(){
+	public void verifyPageDashboardPageTitle(){
 		String dashboardPageTitle = dashboardPage.verifyPageTitle();
 		Assert.assertEquals(dashboardPageTitle, "SSS - Easy & Complete Solution", 
 				"Dashboard page title not matched.");

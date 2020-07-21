@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Osss Online Test Suite">
+
+	  <listeners>
+	   <listener class-name = "ExtentReportListeners.ExtentReporterNG"></listener>
+	  </listeners>
+  
+	  <test name="Osss Online Test">
+	  <classes>
+		  <class name="osss.online.DashboardPageTest"></class>
+		  <class name="osss.online.homePageTest"></class>
+		  <class name="osss.online.loginPageTest"></class>
+		  <class name="osss.online.MasterDistributorPageTest"></class>
+	  </classes>
+  
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

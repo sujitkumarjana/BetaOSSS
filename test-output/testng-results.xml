@@ -1,21 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="7" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24465" started-at="2020-07-21T05:59:28Z" finished-at="2020-07-21T05:59:53Z">
+  <suite name="Osss Online Test Suite" duration-ms="79046" started-at="2020-07-21T07:49:17Z" finished-at="2020-07-21T07:50:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24465" started-at="2020-07-21T05:59:28Z" finished-at="2020-07-21T05:59:53Z">
-      <class name="osss.online.MasterDistributorPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:osss.online.MasterDistributorPageTest@5e025e70]" name="setup" is-config="true" duration-ms="20726" started-at="2020-07-21T11:29:28Z" finished-at="2020-07-21T11:29:49Z">
+    <test name="Osss Online Test" duration-ms="79046" started-at="2020-07-21T07:49:17Z" finished-at="2020-07-21T07:50:37Z">
+      <class name="osss.online.homePageTest">
+        <test-method status="PASS" signature="getTitleTest()[pri:0, instance:osss.online.homePageTest@1cd072a9]" name="getTitleTest" duration-ms="11737" started-at="2020-07-21T13:19:42Z" finished-at="2020-07-21T13:19:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTitleTest -->
+      </class> <!-- osss.online.homePageTest -->
+      <class name="osss.online.loginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:osss.online.loginPageTest@7c75222b]" name="setup" is-config="true" duration-ms="19026" started-at="2020-07-21T13:19:53Z" finished-at="2020-07-21T13:20:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="AddMasterDistributorTest()[pri:1, instance:osss.online.MasterDistributorPageTest@5e025e70]" name="AddMasterDistributorTest" duration-ms="3730" started-at="2020-07-21T11:29:49Z" finished-at="2020-07-21T11:29:53Z">
+        <test-method status="PASS" signature="VerifyPageTitle()[pri:1, instance:osss.online.loginPageTest@7c75222b]" name="VerifyPageTitle" duration-ms="7" started-at="2020-07-21T13:20:12Z" finished-at="2020-07-21T13:20:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyPageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:osss.online.loginPageTest@7c75222b]" name="tearDown" is-config="true" duration-ms="661" started-at="2020-07-21T13:20:12Z" finished-at="2020-07-21T13:20:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- osss.online.loginPageTest -->
+      <class name="osss.online.MasterDistributorPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:osss.online.MasterDistributorPageTest@4c203ea1]" name="setup" is-config="true" duration-ms="20095" started-at="2020-07-21T13:20:13Z" finished-at="2020-07-21T13:20:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="AddMasterDistributorTest()[pri:1, instance:osss.online.MasterDistributorPageTest@4c203ea1]" name="AddMasterDistributorTest" duration-ms="3280" started-at="2020-07-21T13:20:33Z" finished-at="2020-07-21T13:20:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddMasterDistributorTest -->
       </class> <!-- osss.online.MasterDistributorPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="osss.online.DashboardPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:osss.online.DashboardPageTest@e580929]" name="setup" is-config="true" duration-ms="16469" started-at="2020-07-21T13:19:17Z" finished-at="2020-07-21T13:19:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="verifyMenuItems()[pri:0, instance:osss.online.DashboardPageTest@e580929]" name="verifyMenuItems" duration-ms="3914" started-at="2020-07-21T13:19:34Z" finished-at="2020-07-21T13:19:38Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employees Menu is not displayed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employees Menu is not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at osss.online.DashboardPageTest.verifyMenuItems(DashboardPageTest.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMenuItems -->
+        <test-method status="PASS" signature="verifyPageTitle()[pri:0, instance:osss.online.DashboardPageTest@e580929]" name="verifyPageTitle" duration-ms="11" started-at="2020-07-21T13:19:38Z" finished-at="2020-07-21T13:19:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method status="PASS" signature="verifyUserLavel()[pri:0, instance:osss.online.DashboardPageTest@e580929]" name="verifyUserLavel" duration-ms="49" started-at="2020-07-21T13:19:38Z" finished-at="2020-07-21T13:19:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLavel -->
+        <test-method status="PASS" signature="NavigateToMDPageTest()[pri:4, instance:osss.online.DashboardPageTest@e580929]" name="NavigateToMDPageTest" duration-ms="3110" started-at="2020-07-21T13:19:38Z" finished-at="2020-07-21T13:19:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToMDPageTest -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:osss.online.DashboardPageTest@e580929]" name="TearDown" is-config="true" duration-ms="672" started-at="2020-07-21T13:19:41Z" finished-at="2020-07-21T13:19:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- osss.online.DashboardPageTest -->
+    </test> <!-- Osss Online Test -->
+  </suite> <!-- Osss Online Test Suite -->
 </testng-results>
