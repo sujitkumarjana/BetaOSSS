@@ -1,9 +1,6 @@
 package osss.online;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -12,7 +9,6 @@ import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.MasterDistributorPage;
 import TestBase.BaseClass;
-
 
 //Author: Shyam
 public class MasterDistributorPageTest extends BaseClass 
@@ -58,6 +54,8 @@ public class MasterDistributorPageTest extends BaseClass
 	 masterDistributorPage.ClickOnAddNew();
 	 Thread.sleep(2000);
 	// masterDistributorPage.AddMDPersonalInformation("Shyam", "GHorai", "ss@mailinator.com", "9865320102", "ARTPH2265D", "896545214578");
+
 	 masterDistributorPage.AddMDAddressInformation("India", "Himachal Pradesh");
+
 	}
 }

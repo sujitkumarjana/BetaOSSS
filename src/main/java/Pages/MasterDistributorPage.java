@@ -16,26 +16,16 @@ public class MasterDistributorPage extends BaseClass {
 
 	// Intializing the web elements
 
-	@FindBy(xpath = "//button[contains(text(),'Actions')]")
-	WebElement ActionBtn;
-	@FindBy(xpath = "//a[contains(text(),'Add New')]")
-	WebElement AddNewbtn;
-	@FindBy(xpath = "//input[@placeholder='First Name']")
-	WebElement FirstName;
-	@FindBy(xpath = "//input[@placeholder='Last Name']")
-	WebElement LastName;
-	@FindBy(xpath = "//input[@placeholder='Enter a valid email address']")
-	WebElement Email;
-	@FindBy(xpath = "//input[@id='txtPhone']")
-	WebElement Phone;
-	@FindBy(xpath = "//input[@placeholder='PAN Number']")
-	WebElement PAN;
-	@FindBy(xpath = "//input[@placeholder='Aadhar Number']")
-	WebElement Adhar;
-	@FindBy(xpath = "//span[@id='select2-ddlCountry-container']")
-	WebElement CountryDD;
-	@FindBy(xpath = "//label[contains(text(), 'State')]")
-	WebElement StateDD;
+	@FindBy(xpath = "//button[contains(text(),'Actions')]")WebElement ActionBtn;
+	@FindBy(xpath = "//a[contains(text(),'Add New')]")WebElement AddNewbtn;
+	@FindBy(xpath = "//input[@placeholder='First Name']")WebElement FirstName;
+	@FindBy(xpath = "//input[@placeholder='Last Name']")WebElement LastName;
+	@FindBy(xpath = "//input[@placeholder='Enter a valid email address']")WebElement Email;
+	@FindBy(xpath = "//input[@id='txtPhone']")WebElement Phone;
+	@FindBy(xpath = "//input[@placeholder='PAN Number']")WebElement PAN;
+	@FindBy(xpath = "//input[@placeholder='Aadhar Number']")WebElement Adhar;
+	@FindBy(xpath = "//span[@id='select2-ddlCountry-container']")WebElement CountryDD;
+	@FindBy(xpath = "//label[contains(text(), 'State')]")WebElement StateDD;
 
 	// Creating the constructor of MasterDistributorPage
 	public MasterDistributorPage() {
@@ -68,6 +58,7 @@ public class MasterDistributorPage extends BaseClass {
 		Adhar.sendKeys(adhar);
 	}
 
+
 	public void AddMDAddressInformation(String countryname, String State) throws InterruptedException {
 		CountryDD.click();
 		WebElement country = driver
@@ -78,4 +69,6 @@ public class MasterDistributorPage extends BaseClass {
 				"//label[contains(text(), 'State')]/parent::div//following::select/option[@label = '" + State + "']"));
 		state.click();
 	}
+
+   
 }
