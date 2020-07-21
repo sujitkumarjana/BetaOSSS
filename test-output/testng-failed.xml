@@ -6,17 +6,4 @@
       <class name="osss.online.MasterDistributorPageTest"/>
     </classes>
   </test> <!-- Default test -->
-<<<<<<< HEAD
-=======
-  <test name="Default test(failed)">
-    <classes>
-      <class name="osss.online.MasterDistributorPageTest">
-        <methods>
-          <include name="setup"/>
-          <include name="AddMasterDistributorTest"/>
-        </methods>
-      </class> <!-- osss.online.MasterDistributorPageTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
->>>>>>> 4137fd05b5b48d36a5493972bd9d8a7ed06f582d
 </suite> <!-- Failed suite [Default suite] -->

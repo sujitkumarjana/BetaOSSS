@@ -1,13 +1,10 @@
 package osss.online;
 
-<<<<<<< HEAD
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-=======
 import org.testng.annotations.BeforeMethod;
->>>>>>> 4137fd05b5b48d36a5493972bd9d8a7ed06f582d
 import org.testng.annotations.Test;
 
 import Pages.DashboardPage;
@@ -16,37 +13,7 @@ import Pages.LoginPage;
 import Pages.MasterDistributorPage;
 import TestBase.BaseClass;
 
-<<<<<<< HEAD
-public class MasterDistributorPageTest extends BaseClass{
-	
-	HomePage homePage;
-	LoginPage loginPage;
-	DashboardPage dashboardPage;
-	MasterDistributorPage mdPage;
-	
-	
-	public MasterDistributorPageTest(){
-		super();
-	}
 
-	@BeforeClass
-	public void setup(){
-		initialization();
-		homePage = new HomePage();
-		homePage.navigatetoLoginPage();
-		loginPage = new LoginPage();
-		dashboardPage = loginPage.login(prop.getProperty("user"), prop.getProperty("password"));
-		mdPage = new MasterDistributorPage();
-	}
-	
-	@Test
-	public void verifyPageLabel(){
-		Assert.assertEquals(mdPage.verifyPage(), "Master Distributors");;
-	}
-	
-	
-	
-=======
 //Author: Shyam
 public class MasterDistributorPageTest extends BaseClass 
 {
@@ -75,6 +42,11 @@ public class MasterDistributorPageTest extends BaseClass
 	}
 	
 	@Test(enabled=false)
+	public void verifyPageLabel(){
+		Assert.assertEquals(masterDistributorPage.verifyPage(), "Master Distributors");;
+	}
+	
+	@Test(enabled=false)
 	public void ClickOnAddNewTest()
 	{
 	 masterDistributorPage.ClickOnAddNew();
@@ -86,7 +58,6 @@ public class MasterDistributorPageTest extends BaseClass
 	 masterDistributorPage.ClickOnAddNew();
 	 Thread.sleep(2000);
 	// masterDistributorPage.AddMDPersonalInformation("Shyam", "GHorai", "ss@mailinator.com", "9865320102", "ARTPH2265D", "896545214578");
-	 masterDistributorPage.AddMDAddressInformation("Iran");
+	 masterDistributorPage.AddMDAddressInformation("India", "Himachal Pradesh");
 	}
->>>>>>> 4137fd05b5b48d36a5493972bd9d8a7ed06f582d
 }
