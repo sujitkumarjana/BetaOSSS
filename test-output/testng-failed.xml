@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Osss Online Test Suite]">
-  <listeners>
-    <listener class-name="ExtentReportListeners.ExtentReporterNG"/>
-  </listeners>
-  <test name="Osss Online Test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="osss.online.DashboardPageTest"/>
-      <class name="osss.online.homePageTest"/>
-      <class name="osss.online.loginPageTest"/>
-      <class name="osss.online.MasterDistributorPageTest"/>
+      <class name="osss.online.DistributorPageTest"/>
     </classes>
-  </test> <!-- Osss Online Test -->
-  <test name="Osss Online Test(failed)">
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
     <classes>
-      <class name="osss.online.DashboardPageTest">
+      <class name="osss.online.DistributorPageTest">
         <methods>
           <include name="setup"/>
-          <include name="verifyMenuItems"/>
-          <include name="TearDown"/>
+          <include name="addNewDistributor"/>
         </methods>
-      </class> <!-- osss.online.DashboardPageTest -->
-      <class name="osss.online.MasterDistributorPageTest">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- osss.online.MasterDistributorPageTest -->
-      <class name="osss.online.loginPageTest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- osss.online.loginPageTest -->
+      </class> <!-- osss.online.DistributorPageTest -->
     </classes>
-  </test> <!-- Osss Online Test(failed) -->
-</suite> <!-- Failed suite [Osss Online Test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

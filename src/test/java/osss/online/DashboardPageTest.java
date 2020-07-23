@@ -76,22 +76,20 @@ public class DashboardPageTest extends BaseClass{
 		}
 	}
 	
-//<<<<<<< HEAD
+
 	@Test
 	public void verifyUserLavel(){
 		Assert.assertEquals(dashboardPage.verifyUserType(), "Admin");;
 	}
-//=======
+
     //Author: Shyam
 	// Navigating to Master Distributor Page
 	
 	@Test(priority = 4)
 	public void NavigateToMDPageTest()
 	{
-	  dashboardPage.NavigateToMasterDistributor();
+	  dashboardPage.navigatetoMasterDistributorPage();
 	}
-	
-//>>>>>>> 4137fd05b5b48d36a5493972bd9d8a7ed06f582d
 	
 	@AfterClass
 	public void TearDown(){
