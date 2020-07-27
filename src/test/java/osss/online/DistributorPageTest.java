@@ -43,7 +43,8 @@ public class DistributorPageTest extends BaseClass{
 		distributorPage.addDistributor();
 		distributorPage.adddistributorPersonalInformation("ABC", "XYZ", "ABC@ABC.com", "51654656356", 
 				"ABCD1234", "ABCD1234", "C:/Users/DELL/Pictures/download.jpg");
-		distributorPage.addDistributorAddressInformation("India", "West Bengal", "Kolkata", "700054", "Test Test");
+		/*distributorPage.addDistributorAddressInformation("India", "Bihar", "Kolkata", "700054", "Test Test");*/
+		distributorPage.ChooseServices("Recharge");
 	}
 	
 	

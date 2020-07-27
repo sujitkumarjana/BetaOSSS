@@ -53,8 +53,8 @@ public class MasterDistributorPageTest extends BaseClass
 	{
 	 masterDistributorPage.ClickOnAddNew();
 	 Thread.sleep(2000);
-	// masterDistributorPage.AddMDPersonalInformation("Shyam", "GHorai", "ss@mailinator.com", "9865320102", "ARTPH2265D", "896545214578");
-
+	 masterDistributorPage.AddMDPersonalInformation("Shyam", "GHorai", "ss@mailinator.com", "9865320102", "ARTPH2265D", "896545214578");
+	 Thread.sleep(2000);
 	 masterDistributorPage.AddMDAddressInformation("India", "Himachal Pradesh");
 
 	}
