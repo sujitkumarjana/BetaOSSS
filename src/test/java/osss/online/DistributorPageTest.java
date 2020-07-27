@@ -46,11 +46,5 @@ public class DistributorPageTest extends BaseClass{
 		/*distributorPage.addDistributorAddressInformation("India", "Bihar", "Kolkata", "700054", "Test Test");*/
 		distributorPage.ChooseServices("Recharge");
 	}
-	
-	
-	
-	
-	
-	
-	
+		
 }

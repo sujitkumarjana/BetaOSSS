@@ -1,4 +1,4 @@
-package Pages;
+ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -27,6 +27,9 @@ public class MasterDistributorPage extends BaseClass {
 	@FindBy(xpath = "//input[@placeholder='Aadhar Number']")WebElement Adhar;
 	@FindBy(xpath = "//span[@id='select2-ddlCountry-container']")WebElement CountryDD;
 	@FindBy(xpath = "//label[contains(text(), 'State')]")WebElement StateDD;
+	@FindBy(xpath="//input[@placeholder='City']")WebElement City;
+	@FindBy(xpath="//input[@placeholder='999999']")WebElement Pin;
+	@FindBy(xpath="//textarea[@placeholder='Enter your address here']") WebElement Address;
 
 	// Creating the constructor of MasterDistributorPage
 	public MasterDistributorPage() {
@@ -60,16 +63,22 @@ public class MasterDistributorPage extends BaseClass {
 	}
 
 
-	public void AddMDAddressInformation(String countryname, String State) throws InterruptedException {
+	public void AddMDAddressInformation(String countryname, String State, String city, String pin, String address) throws InterruptedException 
+	  {
 		CountryDD.click();
-		WebElement country = driver
-				.findElement(By.xpath("//select[@id='ddlCountry']/option[@label = '" + countryname + "']"));
+		WebElement country = driver.findElement(By.xpath("//select[@id='ddlCountry']/option[@label = '" + countryname + "']"));
 		country.click();
 		StateDD.click();
-		WebElement state = driver.findElement(By.xpath(
-				"//label[contains(text(), 'State')]/parent::div//following::select/option[@label = '" + State + "']"));
+		WebElement state = driver.findElement(By.xpath("//label[contains(text(), 'State')]/parent::div//following::select/option[@label = '" + State + "']"));
 		state.click();
+		City.sendKeys(city);
+		Pin.sendKeys(pin);
+		Address.sendKeys(address);
+		
+	  }
+	public void SelectServices()
+	{
+		
 	}
 
-   
-}
+ }

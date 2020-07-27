@@ -1,5 +1,6 @@
 package osss.online;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -33,7 +34,7 @@ public class MasterDistributorPageTest extends BaseClass
 	 loginPage = new LoginPage();
 	 loginPage.login(prop.getProperty("user"), prop.getProperty("password"));
 	 dashboardPage = new DashboardPage();
-	 dashboardPage.navigatetoMasterDistributorPage();
+	 dashboardPage.NavigateToMasterDistributor();
 	 masterDistributorPage = new MasterDistributorPage();
 	}
 	
@@ -54,8 +55,12 @@ public class MasterDistributorPageTest extends BaseClass
 	 masterDistributorPage.ClickOnAddNew();
 	 Thread.sleep(2000);
 	 masterDistributorPage.AddMDPersonalInformation("Shyam", "GHorai", "ss@mailinator.com", "9865320102", "ARTPH2265D", "896545214578");
-	 Thread.sleep(2000);
-	 masterDistributorPage.AddMDAddressInformation("India", "Himachal Pradesh");
+     Thread.sleep(1000);
+	 
+	 // To Scroll up
+	 ((JavascriptExecutor)driver).executeScript("scroll(0,-700)");
+	 
+	// masterDistributorPage.AddMDAddressInformation("India", "Bengal");
 
 	}
 }

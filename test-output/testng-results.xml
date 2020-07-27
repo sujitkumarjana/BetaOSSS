@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
+<<<<<<< Updated upstream
   <suite name="Default suite" duration-ms="20421" started-at="2020-07-27T05:20:28Z" finished-at="2020-07-27T05:20:48Z">
     <groups>
     </groups>
@@ -12,6 +13,18 @@
           </reporter-output>
         </test-method> <!-- setup -->
         <test-method status="PASS" signature="addNewDistributor()[pri:0, instance:osss.online.DistributorPageTest@75bd9247]" name="addNewDistributor" duration-ms="1573" started-at="2020-07-27T10:50:47Z" finished-at="2020-07-27T10:50:48Z">
+=======
+  <suite name="Default suite" duration-ms="96589" started-at="2020-07-21T15:35:20Z" finished-at="2020-07-21T15:36:56Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="96589" started-at="2020-07-21T15:35:20Z" finished-at="2020-07-21T15:36:56Z">
+      <class name="osss.online.MasterDistributorPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:osss.online.MasterDistributorPageTest@5e025e70]" name="setup" is-config="true" duration-ms="88180" started-at="2020-07-21T21:05:20Z" finished-at="2020-07-21T21:06:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="AddMasterDistributorTest()[pri:1, instance:osss.online.MasterDistributorPageTest@5e025e70]" name="AddMasterDistributorTest" duration-ms="8374" started-at="2020-07-21T21:06:48Z" finished-at="2020-07-21T21:06:56Z">
+>>>>>>> Stashed changes
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewDistributor -->
